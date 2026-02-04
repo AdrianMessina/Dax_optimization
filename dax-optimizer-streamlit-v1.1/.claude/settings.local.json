@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import streamlit; import plotly; import pandas; print\\(''OK: Todas las dependencias actuales funcionan correctamente''\\)\")",
+      "Bash(pip install streamlit-extras)",
+      "Bash(pip install streamlit-lottie requests)",
+      "Bash(python -m py_compile app.py)",
+      "Bash(python -c \"from streamlit_extras.metric_cards import style_metric_cards; from streamlit_extras.colored_header import colored_header; from streamlit_lottie import st_lottie; print\\(''OK: Todos los imports funcionan correctamente''\\)\")"
+    ]
+  }
+}
