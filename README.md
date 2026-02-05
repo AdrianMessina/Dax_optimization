@@ -1,8 +1,8 @@
-# 🚀 DAX Optimization Suite
+# 🚀 Suite de Optimización DAX
 
-**Comprehensive toolset for analyzing and optimizing DAX queries in Power BI**
+**Conjunto completo de herramientas para analizar y optimizar consultas DAX en Power BI**
 
-> Developed by **Adrián Javier Messina** | YPF S.A. | January 2026
+> Desarrollado por **Adrián Javier Messina** | YPF S.A. | Enero 2026
 
 [![Version](https://img.shields.io/badge/version-1.1-blue.svg)](CHANGELOG.md)
 [![Python](https://img.shields.io/badge/python-3.11+-green.svg)](https://python.org)
@@ -12,32 +12,32 @@
 
 ---
 
-## 📚 Table of Contents
+## 📚 Tabla de Contenidos
 
-- [Overview](#overview)
-- [Applications](#applications)
-- [Quick Start](#quick-start)
-- [Features](#features)
-- [Installation](#installation)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [License](#license)
+- [Descripción General](#descripción-general)
+- [Aplicaciones](#aplicaciones)
+- [Inicio Rápido](#inicio-rápido)
+- [Características](#características)
+- [Instalación](#instalación)
+- [Documentación](#documentación)
+- [Contribuir](#contribuir)
+- [Licencia](#licencia)
 
-## 🎯 Overview
+## 🎯 Descripción General
 
-This repository contains a suite of tools designed to help Power BI developers optimize their DAX code by detecting anti-patterns, measuring complexity, and providing actionable suggestions for improvement.
+Este repositorio contiene un conjunto de herramientas diseñadas para ayudar a los desarrolladores de Power BI a optimizar su código DAX mediante la detección de anti-patrones, medición de complejidad y sugerencias prácticas de mejora.
 
-### Applications Included
+### Aplicaciones Incluidas
 
-This repository contains three applications with different approaches:
+Este repositorio contiene tres aplicaciones con diferentes enfoques:
 
-1. **dax-optimizer** - React/TypeScript web application with Monaco Editor
-2. **dax-optimizer-streamlit** - Basic Python/Streamlit web app for quick analysis
-3. **dax-optimizer-streamlit-v1.1** - Advanced version with PBIP file support and measure ranking
+1. **dax-optimizer** - Aplicación web React/TypeScript con Monaco Editor
+2. **dax-optimizer-streamlit** - Aplicación web Python/Streamlit básica para análisis rápidos
+3. **dax-optimizer-streamlit-v1.1** - Versión avanzada con soporte para archivos PBIP y ranking de medidas
 
-## 🚀 Quick Start
+## 🚀 Inicio Rápido
 
-### Option 1: Streamlit Advanced (Recommended)
+### Opción 1: Streamlit Avanzado (Recomendado)
 
 ```bash
 cd dax-optimizer-streamlit-v1.1
@@ -45,7 +45,7 @@ pip install -r requirements.txt
 streamlit run streamlit_app/app.py
 ```
 
-### Option 2: React Web App
+### Opción 2: Aplicación Web React
 
 ```bash
 cd dax-optimizer
@@ -53,7 +53,7 @@ npm install
 npm run dev
 ```
 
-### Option 3: Streamlit Basic
+### Opción 3: Streamlit Básico
 
 ```bash
 cd dax-optimizer-streamlit
@@ -61,83 +61,83 @@ pip install -r requirements.txt
 streamlit run streamlit_app/app.py
 ```
 
-## ⭐ Features
+## ⭐ Características
 
-### Core Capabilities
+### Capacidades Principales
 
-- ✅ **DAX Pattern Detection**: Identifies anti-patterns and performance issues
-- ✅ **Complexity Scoring**: Measures code complexity (0-100 scale)
-- ✅ **PBIP File Support**: Analyzes complete Power BI Project files
-- ✅ **Measure Ranking**: Prioritizes measures by impact and optimization potential
-- ✅ **Smart Suggestions**: Provides specific optimization recommendations
-- ✅ **Multiple Interfaces**: Choose between React, Streamlit basic, or Streamlit advanced
+- ✅ **Detección de Patrones DAX**: Identifica anti-patrones y problemas de rendimiento
+- ✅ **Puntuación de Complejidad**: Mide la complejidad del código (escala 0-100)
+- ✅ **Soporte de Archivos PBIP**: Analiza archivos completos de Power BI Project
+- ✅ **Ranking de Medidas**: Prioriza medidas por impacto y potencial de optimización
+- ✅ **Sugerencias Inteligentes**: Proporciona recomendaciones específicas de optimización
+- ✅ **Múltiples Interfaces**: Elige entre React, Streamlit básico o Streamlit avanzado
 
-### Detection Capabilities
+### Capacidades de Detección
 
-#### 🔴 Critical Issues
-- Nested iterators (SUMX inside SUMX)
-- FILTER(ALL(Table), ...) on full tables
-- Measures used in calculated columns
-- Unnecessary context transitions
+#### 🔴 Problemas Críticos
+- Iteradores anidados (SUMX dentro de SUMX)
+- FILTER(ALL(Tabla), ...) en tablas completas
+- Medidas usadas en columnas calculadas
+- Transiciones de contexto innecesarias
 
-#### ⚠️ Warnings
-- FILTER without KEEPFILTERS in CALCULATE
-- Nested CALCULATE functions
-- Repeated expressions without variables
-- Expensive functions (CROSSJOIN, GENERATE, LOOKUPVALUE)
+#### ⚠️ Advertencias
+- FILTER sin KEEPFILTERS en CALCULATE
+- Funciones CALCULATE anidadas
+- Expresiones repetidas sin variables
+- Funciones costosas (CROSSJOIN, GENERATE, LOOKUPVALUE)
 
-#### ℹ️ Info
-- Complex code without variables
-- Repeated measure references
-- Refactoring opportunities
+#### ℹ️ Información
+- Código complejo sin variables
+- Referencias a medidas repetidas
+- Oportunidades de refactorización
 
-## 📦 Installation
+## 📦 Instalación
 
-### Prerequisites
+### Prerequisitos
 
-- **For Python apps**: Python 3.8+ and pip
-- **For React app**: Node.js 18+ and npm
+- **Para aplicaciones Python**: Python 3.8+ y pip
+- **Para aplicación React**: Node.js 18+ y npm
 
-### Corporate Proxy Configuration
+### Configuración de Proxy Corporativo
 
-If you're behind a corporate proxy:
+Si estás detrás de un proxy corporativo:
 
 ```bash
 export HTTPS_PROXY=http://proxy-azure
 export HTTP_PROXY=http://proxy-azure
 
-# Install Python packages
+# Instalar paquetes Python
 pip install -r requirements.txt
 
-# Or install Node packages
+# O instalar paquetes Node
 npm install
 ```
 
-## 📖 Documentation
+## 📖 Documentación
 
-Each application has its own detailed documentation:
+Cada aplicación tiene su propia documentación detallada:
 
-- **[dax-optimizer-streamlit-v1.1/README.md](dax-optimizer-streamlit-v1.1/README.md)** - Advanced Streamlit version (recommended)
-- **[dax-optimizer/README.md](dax-optimizer/README.md)** - React web application
-- **[dax-optimizer-streamlit/README.md](dax-optimizer-streamlit/README.md)** - Basic Streamlit version
+- **[dax-optimizer-streamlit-v1.1/README.md](dax-optimizer-streamlit-v1.1/README.md)** - Versión Streamlit avanzada (recomendada)
+- **[dax-optimizer/README.md](dax-optimizer/README.md)** - Aplicación web React
+- **[dax-optimizer-streamlit/README.md](dax-optimizer-streamlit/README.md)** - Versión Streamlit básica
 
-Additional documentation:
+Documentación adicional:
 
-- **[CHANGELOG.md](dax-optimizer-streamlit-v1.1/CHANGELOG.md)** - Version history
-- **[ROADMAP.md](dax-optimizer-streamlit-v1.1/ROADMAP.md)** - Future development plans
+- **[CHANGELOG.md](dax-optimizer-streamlit-v1.1/CHANGELOG.md)** - Historial de versiones
+- **[ROADMAP.md](dax-optimizer-streamlit-v1.1/ROADMAP.md)** - Planes de desarrollo futuros
 
-## 🏗️ Architecture
+## 🏗️ Arquitectura
 
 ```
 dax-optimization/
-├── dax-optimizer/                      # React + TypeScript app
+├── dax-optimizer/                      # Aplicación React + TypeScript
 │   ├── src/
 │   │   ├── components/
 │   │   └── services/
 │   ├── package.json
 │   └── README.md
 │
-├── dax-optimizer-streamlit/            # Basic Streamlit app
+├── dax-optimizer-streamlit/            # Aplicación Streamlit básica
 │   ├── core/
 │   │   ├── dax_parser.py
 │   │   ├── dax_analyzer.py
@@ -147,41 +147,41 @@ dax-optimization/
 │   ├── requirements.txt
 │   └── README.md
 │
-└── dax-optimizer-streamlit-v1.1/       # Advanced Streamlit app
+└── dax-optimizer-streamlit-v1.1/       # Aplicación Streamlit avanzada
     ├── core/
     │   ├── dax_parser.py
     │   ├── dax_analyzer.py
     │   ├── dax_suggestions.py
-    │   ├── pbip_extractor.py          # NEW: PBIP support
-    │   └── measure_ranker.py           # NEW: Ranking system
+    │   ├── pbip_extractor.py          # NUEVO: Soporte PBIP
+    │   └── measure_ranker.py           # NUEVO: Sistema de ranking
     ├── streamlit_app/
     │   └── app.py
     ├── requirements.txt
     └── README.md
 ```
 
-## 🤝 Contributing
+## 🤝 Contribuir
 
-Contributions are welcome! If you have suggestions or improvements:
+¡Las contribuciones son bienvenidas! Si tienes sugerencias o mejoras:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Haz un fork del repositorio
+2. Crea una rama de funcionalidad (`git checkout -b feature/nueva-funcionalidad`)
+3. Confirma tus cambios (`git commit -m 'Agregar nueva funcionalidad'`)
+4. Empuja a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Abre un Pull Request
 
-## 📝 License
+## 📝 Licencia
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
-## 🙏 Acknowledgments
+## 🙏 Agradecimientos
 
-- Built with [Streamlit](https://streamlit.io/)
-- Built with [React](https://react.dev/) and [Vite](https://vitejs.dev/)
-- DAX best practices from [SQLBI](https://www.sqlbi.com/)
-- Power BI documentation from [Microsoft](https://learn.microsoft.com/power-bi/)
+- Construido con [Streamlit](https://streamlit.io/)
+- Construido con [React](https://react.dev/) y [Vite](https://vitejs.dev/)
+- Mejores prácticas DAX de [SQLBI](https://www.sqlbi.com/)
+- Documentación de Power BI de [Microsoft](https://learn.microsoft.com/power-bi/)
 
-## 📧 Contact
+## 📧 Contacto
 
 **Adrián Javier Messina**
 Desarrollador de visualización Sr. - YPF S.A.
@@ -189,4 +189,4 @@ Email: adrianjavier.messina@set.ypf.com
 
 ---
 
-**Made with ❤️ for the Power BI community**
+**Hecho con ❤️ para la comunidad de Power BI**
