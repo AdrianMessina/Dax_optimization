@@ -38,3 +38,6 @@ Thumbs.db
 # Logs
 *.log
 logs/
+
+# Scripts de deployment con credenciales
+subir_*.bat
